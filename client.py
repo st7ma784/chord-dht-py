@@ -4,7 +4,7 @@ from const_chord import (
     LOOKUP_REQ,
 )
 
-
+## This is a test case for the efficacy of the Chord DHT node style - we can do better! 
 class Client:
     def __init__(
         self,
@@ -41,6 +41,9 @@ class Client:
         except Exception:
             pass
         self.channel.srem('members', client_id)
+
+# We're going to make a flask app to show the state in a web API. 
+
 
 if __name__ == '__main__':
     c = Client()
