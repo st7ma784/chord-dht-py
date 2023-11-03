@@ -65,6 +65,7 @@ class Transport:
 
 
 class ChordNode:
+    #At the moment all this does is create some Chord Node. 
     def __init__(self, redis_ip='redis', redis_port=6379, n_bits=5):
         self.transport = Transport(
             redis_ip=redis_ip,
@@ -169,6 +170,7 @@ class ChordNode:
             print('Interrupted by user...')
         print('FT[','%04d'%self.node_id,']: ',['%04d' % k for k in self.FT])
 
+#extend chordNode to have a flaskAPI for status. 
 
 if __name__ == '__main__':
     m = 5
